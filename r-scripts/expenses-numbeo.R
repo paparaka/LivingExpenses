@@ -1,6 +1,7 @@
 #source("r-scripts/init.R")
 
-expenses <- read.csv("import-tables/expenses.csv")
+expenses <- read.csv("import-tables/expenses.csv", header = TRUE, sep = ",")
+str(expenses)
 
 expenses.plot <- data.frame(vars = c("SUM","Rent","Utilities","Food","Transport"),
                             names = c("Basic living expenses","Rent","Utilities","Food expenses","Commute expenses"),

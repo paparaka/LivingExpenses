@@ -1,12 +1,5 @@
-library(ggmap)
+#library(ggmap)
 
-foo <- geocode(as.character(expenses$City))
-expenses$lon <- foo$lon
-expenses$lat <- foo$lat
-
-my.maps <- data.frame(Country = c("California","Germany","Japan","UK"),
-                      center = c("California","Germany","Japan","Manchester"),
-                      stringsAsFactors = FALSE)
 
 Plot.Expenses.Maps <- function(this.country = "California") {
   
@@ -26,11 +19,28 @@ Plot.Expenses.Maps <- function(this.country = "California") {
 }
 #Plot.Expenses.Maps()
 
-for (i in 1:nrow(my.maps)) {
+plot.Maps <- function (expenses) {
+  require(ggmap)
   
-  p <- Plot.Expenses.Maps(my.maps$Country[i])
+  foo <- geocode(paste(as.character(expenses$City), as.character(expenses$Country)) )
+  expenses$lon <- foo$lon
+  expenses$lat <- foo$lat
   
-  ggsave(paste0("export-png/numbeo-map-",my.maps$Country[i],".png"),p, width = 9, height = 9, dpi = 300)
-  ggsave(paste0("export-pdf/numbeo-map-",my.maps$Country[i],".pdf"),p, width = 9, height = 9)
-
+  my.maps <- data.frame(Country = c("California","Germany","Japan","UK"),
+                        center = c("California","Germany","Japan","Manchester"),
+                        stringsAsFactors = FALSE)
+  
+  
+  for (i in 1:nrow(my.maps)) {
+    
+    #TODO add try,catch for preventing interruption after errors
+    
+    p <- Plot.Expenses.Maps(my.maps$Country[i])
+    
+    ggsave(paste0("export-png/numbeo-map-",my.maps$Country[i],".png"),p, width = 9, height = 9, dpi = 300)
+    ggsave(paste0("export-pdf/numbeo-map-",my.maps$Country[i],".pdf"),p, width = 9, height = 9)
+  
+  }
 }
+
+plot.Maps(expenses)
