@@ -1,0 +1,125 @@
+Position,Location,Salary Mean,Salary Low,Salary High,Source,Sample,Currency
+Data Scientist,USA,118709,76000,148000,glassdoor,63,USD
+Data Engineer,USA,95936,66000,117000,glassdoor,88,USD
+Software Engineer,USA,90374,66000,128000,glassdoor,9561,USD
+Junior Software Engineer,USA,65589,51000,8000,glassdoor,23,USD
+Senior Software Engineer ,USA,106575,81000,138000,glassdoor,2463,USD
+Senior Programmer,USA,86535,64000,111700,glassdoor,398,USD
+Junior Programmer,USA,53297,43000,71000,glassdoor,10,USD
+Programmer,USA,64537,52000,82000,glassdoor,4888,USD
+Engineer,USA,75867,58000,107000,glassdoor,25797,USD
+Mechanical Engineer,USA,70146,56000,98000,glassdoor,686,USD
+Energy Engineer,USA,70146,55000,91000,glassdoor,21,USD
+Scientist,USA,88753,55000,118000,glassdoor,1490,USD
+Research Scientist,USA,77238,49000,124000,glassdoor,1718,USD
+Researcher,USA,59909,42000,132000,glassdoor,17164,USD
+Process Engineer ,USA,88382,62000,119000,glassdoor,2033,USD
+Data Scientist,San Francisco,126875,96000,144000,glassdoor,135,USD
+Data Engineer,San Francisco,98455,81000,121000,glassdoor,125,USD
+Software Engineer,San Francisco,103367,88000,152000,glassdoor,22103,USD
+Junior Software Engineer,San Francisco,80600,63000,93000,glassdoor,18,USD
+Senior Software Engineer ,San Francisco,124131,104000,138000,glassdoor,5018,USD
+Senior Programmer,San Francisco,96828,75000,125000,glassdoor,572,USD
+Programmer,San Francisco,69161,58000,95000,glassdoor,14902,USD
+Engineer,San Francisco,122835,81000,155000,glassdoor,36433,USD
+Mechanical Engineer,San Francisco,87601,67000,118000,glassdoor,302,USD
+Energy Engineer,San Francisco,74426,62000,90000,glassdoor,33,USD
+Scientist,San Francisco,105395,78000,139000,glassdoor,2340,USD
+Research Scientist,San Francisco,110942,75000,139000,glassdoor,553,USD
+Researcher,San Francisco,82110,38000,12000,glassdoor,4650,USD
+Process Engineer ,San Francisco,97179,71000,110000,glassdoor,429,USD
+Data Scientist,London,40000,31000,61000,glassdoor,4,GBP
+Software Engineer,London,37220,27000,60000,glassdoor,1056,GBP
+Senior Software Engineer ,London,49000,37000,72000,glassdoor,293,GBP
+Senior Programmer,London,31501,30000,38000,glassdoor,41,GBP
+Programmer,London,34100,26000,52000,glassdoor,924,GBP
+Engineer,London,35000,24000,55000,glassdoor,2636,GBP
+Mechanical Engineer,London,36750,21000,67000,glassdoor,87,GBP
+Scientist,London,31591,21000,56000,glassdoor,188,GBP
+Research Scientist,London,32000,27000,43000,glassdoor,30,GBP
+Researcher,London,32000,20000,55000,glassdoor,1451,GBP
+Process Engineer ,London,41750,29000,55000,glassdoor,37,GBP
+Data Scientist,UK,40000,32000,61000,glassdoor,4,GBP
+Software Engineer,UK,35000,25000,55000,glassdoor,1056,GBP
+Junior Software Engineer,UK,25500,20000,32000,glassdoor,6,GBP
+Senior Software Engineer ,UK,45000,33000,65000,glassdoor,293,GBP
+Senior Programmer,UK,32000,30000,44000,glassdoor,41,GBP
+Programmer,UK,28550,22000,50000,glassdoor,924,GBP
+Engineer,UK,31500,23000,50000,glassdoor,2636,GBP
+Mechanical Engineer,UK,32000,24000,55000,glassdoor,87,GBP
+Scientist,UK,31591,22000,55000,glassdoor,188,GBP
+Research Scientist,UK,32000,23000,45000,glassdoor,30,GBP
+Researcher,UK,30000,19000,50000,glassdoor,1451,GBP
+Process Engineer ,UK,30770,25000,44000,glassdoor,37,GBP
+Data Scientist,UK,39528,26709,60928,payscale,133,GBP
+Software Engineer,UK,33286,23059,50964,payscale,3617,GBP
+Junior Software Engineer,UK,23019,16795,29674,payscale,263,GBP
+Senior Software Engineer ,UK,43770,32853,63060,payscale,1685,GBP
+Mechanical Engineer,UK,29980,20208,42429,payscale,2286,GBP
+Energy Engineer,UK,28402,20943,48696,payscale,34,GBP
+Research Scientist,UK,29896,21967,39230,payscale,902,GBP
+Process Engineer ,UK,33796,4577,49737,payscale,720,GBP
+Data Scientist,London,50000,47000,62500,totaljobs,10,GBP
+Software Engineer,London,57500,47500,67500,totaljobs,75,GBP
+Senior Software Engineer ,London,62500,57500,67500,totaljobs,11,GBP
+Programmer,London,47500,42500,62500,totaljobs,105,GBP
+Engineer,London,42500,32500,57500,totaljobs,1249,GBP
+Mechanical Engineer,London,32500,29000,42500,totaljobs,37,GBP
+Mechanical Engineer,London,37500,31965,46250,totaljobs,58,GBP
+Scientist,London,37500,31624,48750,totaljobs,28,GBP
+Researcher,London,32500,25000,47500,totaljobs,73,GBP
+Data Scientist,USA,93338,63039,126099,payscale,1511,USD
+Software Engineer,USA,78669,54733,115675,payscale,35059,USD
+Junior Software Engineer,USA,54166,39144,72259,payscale,1393,USD
+Senior Software Engineer ,USA,102445,76122,136815,payscale,17167,USD
+Senior Mechanical Engineer,USA,90398,70428,122051,payscale,6124,USD
+Mechanical Engineer,USA,66437,49896,92650,payscale,"22,730",USD
+Energy Engineer,USA,64279,49891,88049,payscale,743,USD
+Research Scientist,USA,75957,46090,111787,payscale,"5,574",USD
+Researcher,USA,69476,34340,132521,payscale,621,USD
+Process Engineer ,USA,70662,52506,97105,payscale,"6,531",USD
+Data Scientist,San Francisco,130000,100000,180000,payscale,45,USD
+Software Engineer,Canada,70000,50000,90000,glassdoor,"2,825",CAD
+Senior Software Engineer ,Canada,90000,75000,110000,glassdoor,646,CAD
+Senior Programmer,Canada,75000,49000,94000,glassdoor,169,CAD
+Programmer,Canada,56000,40000,75000,glassdoor,1443,CAD
+Engineer,Canada,74000,50000,110000,glassdoor,11002,CAD
+Mechanical Engineer,Canada,67550,47000,92000,glassdoor,360,CAD
+Scientist,Canada,107097,64000,153000,glassdoor,514,CAD
+Research Scientist,Canada,91000,54000,110000,glassdoor,108,CAD
+Researcher,Canada,50000,30000,70000,glassdoor,3045,CAD
+Process Engineer ,Canada,75000,46000,115000,glassdoor,213,CAD
+Data Scientist,Canada,72413,48553,97948,payscale,82,CAD
+Software Engineer,Canada,66926,48894,89737,payscale,"2,493",CAD
+Junior Software Engineer,Canada,48579,38931,58436,payscale,289,CAD
+Senior Software Engineer ,Canada,87152,65847,108105,payscale,"1,281",CAD
+Mechanical Engineer,Canada,62438,46114,92842,payscale,"2,861",CAD
+Energy Engineer,Canada,61125,43692,89883,payscale,36,CAD
+Research Scientist,Canada,62772,43020,89507,payscale,481,CAD
+Process Engineer ,Canada,70234,49846,101706,payscale,813,CAD
+Software Engineer,Germany,50000,42000,65000,glassdoor,170,EUR
+Senior Software Engineer ,Germany,60000,49000,75000,glassdoor,170,EUR
+Engineer,Germany,60000,40000,72000,glassdoor,170,EUR
+Research Scientist,Germany,50000,38000,59000,glassdoor,170,EUR
+Researcher,Germany,44000,33000,54000,glassdoor,170,EUR
+Software Engineer,Germany,46461,29000,62000,payscale,170,EUR
+Junior Software Engineer,Germany,36610,20000,50000,payscale,170,EUR
+Senior Software Engineer ,Germany,57841,41000,73000,payscale,170,EUR
+Mechanical Engineer,Germany,46125,24000,68000,payscale,170,EUR
+Energy Engineer,Germany,51000,40000,70000,payscale,170,EUR
+Research Scientist,Germany,50336,31000,77000,payscale,170,EUR
+Process Engineer ,Germany,49666,29000,79000,payscale,170,EUR
+Software Engineer,Denmark,63000,21000,88000,payscale,170,USD
+Mechanical Engineer,Denmark,61000,34000,98000,payscale,170,USD
+Business Analyst,San Francisco,65000,50000,91000,glassdoor,9825,USD
+Business Data Analyst,San Francisco,67000,53000,121000,glassdoor,42,USD
+Business Analyst,Germany,46500,39000,65000,glassdoor,298,EUR
+Business Analyst,London,39000,28000,60000,glassdoor,935,GBP
+Business Analyst,UK,36000,26000,55000,glassdoor,935,GBP
+Business Analyst,Germany,48000,30000,71000,payscale,161,EUR
+Business Analyst,UK,37000,25000,56000,payscale,1507,GBP
+Business Analyst,Canada,65000,47000,85000,payscale,1777,CAD
+Junior Software Engineer,London,23019,16795,29674,payscale,263,GBP
+Data Scientist,Germany,48000,35000,69000,payscale,58,EUR
+Business Analyst,USA,47000,67000,95000,payscale,8185,USD
+Business Analyst,San Francisco,52000,82000,120000,payscale,120,USD
