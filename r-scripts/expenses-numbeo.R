@@ -50,16 +50,32 @@ Expenses.Plot <- function(filename = "import-tables/expenses.csv", currency = "U
   expenses <- read.csv(filename, header = TRUE, sep = ",")
   # str(expenses)
   
+  # compute the prices for the 4 categories bellow based on Nagoya prices and Price Index ratio between the calculated city and Nagoya 
+  nagoya.expenses <- list(beer = 500, coffee = 450, dinner = 1200, lunch = 1000 )
+  
+  expenses$Lunch <- nagoya.expenses$lunch * as.numeric(currencies["JPY", as.character(expenses$Currency)]) * expenses$Restaurant.Price.Index/expenses[expenses$City == "Nagoya",]$Restaurant.Price.Index
+  expenses$Dinner <- nagoya.expenses$dinner * as.numeric(currencies["JPY", as.character(expenses$Currency)]) * expenses$Restaurant.Price.Index/expenses[expenses$City == "Nagoya",]$Restaurant.Price.Index
+  expenses$Alcohol <- nagoya.expenses$beer * as.numeric(currencies["JPY", as.character(expenses$Currency)]) * expenses$Consumer.Price.Index/expenses[expenses$City == "Nagoya",]$Consumer.Price.Index
+  expenses$Coffee <- nagoya.expenses$coffee * as.numeric(currencies["JPY", as.character(expenses$Currency)]) * expenses$Consumer.Price.Index/expenses[expenses$City == "Nagoya",]$Consumer.Price.Index
+  
+  ####
+  
   expenses.plot <- data.frame(vars = c("SUM","Rent","Utilities","Food","Transport",
-                                       "Meal.Inexpensive", "Beer", "Cappucino"),
+                                       "Meal.Inexpensive", "Beer", "Cappucino", 
+                                       "Lunch", "Dinner", "Alcohol", "Coffee"),
                               names = c("monthly Basic living expenses","monthly Rent","monthly Utilities","monthly Food expenses","monthly Commute expenses", 
-                                        "Meal Inexpensive", "Beer Draft", "Cappucino"),
+                                        "Meal Inexpensive", "Beer Draft", "Cappucino",
+                                        "Computed Lunch", "Computed Dinner", "Computed Beer", "Computed Coffee"),
                               stringsAsFactors = FALSE
   )
+  
   
   expenses[,expenses.plot$vars] <- 
     expenses[,expenses.plot$vars] * currencies[as.character(expenses$Currency), currency]
   expenses$Currency <- currency
+  
+  
+  
   
   #TODO implement a try() catch() method to skip errors
   if (plot == TRUE) {
@@ -77,8 +93,6 @@ Expenses.Plot <- function(filename = "import-tables/expenses.csv", currency = "U
   
   return(expenses)
 }
-
-
 
 
 
