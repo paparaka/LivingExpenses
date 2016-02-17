@@ -45,7 +45,7 @@ Expenses.Box.Plot  <- function(expenses, this.var, this.name, this.currency) {
   return(p)
 }
 
-Expenses.Load.n.PLot <- function(filename = "import-tables/expenses.csv", currency = "USD") {
+Expenses.Plot <- function(filename = "import-tables/expenses.csv", currency = "USD", plot = TRUE) {
   
   expenses <- read.csv(filename, header = TRUE, sep = ",")
   # str(expenses)
@@ -62,16 +62,17 @@ Expenses.Load.n.PLot <- function(filename = "import-tables/expenses.csv", curren
   expenses$Currency <- currency
   
   #TODO implement a try() catch() method to skip errors
-  
-  for (i in 1:nrow(expenses.plot)) {
-    
-    #p1 <- Expenses.Bar.Plot(expenses.plot$vars[i],expenses.plot$names[i])
-    p2 <- Expenses.Box.Plot (expenses, expenses.plot$vars[i],expenses.plot$names[i],currency)
-    
-    # ggsave(paste0("export-png/numbeo-bar-",expenses.plot$names[i],".png"),p1, width = 12, height = 9, dpi = 300)
-    # ggsave(paste0("export-pdf/numbeo-bar-",expenses.plot$names[i],".pdf"),p1, width = 12, height = 9)
-    ggsave(paste0("export-png/numbeo-box-",expenses.plot$names[i],".png"),p2, width = 12, height = 9, dpi = 300)
-    ggsave(paste0("export-pdf/numbeo-box-",expenses.plot$names[i],".pdf"),p2, width = 12, height = 9)
+  if (plot == TRUE) {
+    for (i in 1:nrow(expenses.plot)) {
+      
+      #p1 <- Expenses.Bar.Plot(expenses.plot$vars[i],expenses.plot$names[i])
+      p2 <- Expenses.Box.Plot (expenses, expenses.plot$vars[i],expenses.plot$names[i],currency)
+      
+      # ggsave(paste0("export-png/numbeo-bar-",expenses.plot$names[i],".png"),p1, width = 12, height = 9, dpi = 300)
+      # ggsave(paste0("export-pdf/numbeo-bar-",expenses.plot$names[i],".pdf"),p1, width = 12, height = 9)
+      ggsave(paste0("export-png/numbeo-box-",expenses.plot$names[i],".png"),p2, width = 12, height = 9, dpi = 300)
+      ggsave(paste0("export-pdf/numbeo-box-",expenses.plot$names[i],".pdf"),p2, width = 12, height = 9)
+    }
   }
   
   return(expenses)

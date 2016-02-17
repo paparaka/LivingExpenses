@@ -30,6 +30,7 @@ source("r-scripts/tax.calc.R")
 source("r-scripts/taxes-plot.R")
 source("r-scripts/salaries.R")
 source("r-scripts/expenses-numbeo.R")
+expenses <- Expenses.Plot()
 
 
 
