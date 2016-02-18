@@ -94,5 +94,3 @@ Expenses.Plot <- function(filename = "import-tables/expenses.csv", currency = "U
   return(expenses)
 }
 
-
-

@@ -5,6 +5,7 @@ library(ggplot2)
 library(RColorBrewer)
 library(ggrepel)
 library(data.table)
+library(tidyr)
 
 # TODO replace with a function that loads the latest exchange rates
 
@@ -30,7 +31,7 @@ source("r-scripts/tax.calc.R")
 source("r-scripts/taxes-plot.R")
 source("r-scripts/salaries.R")
 source("r-scripts/expenses-numbeo.R")
-expenses <- Expenses.Plot()
+expenses <- Expenses.Plot(plot = F)
 
 
 
