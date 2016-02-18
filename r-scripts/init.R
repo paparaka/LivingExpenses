@@ -6,6 +6,7 @@ library(RColorBrewer)
 library(ggrepel)
 library(data.table)
 library(tidyr)
+library(ggrepel)
 
 # TODO replace with a function that loads the latest exchange rates
 
@@ -19,9 +20,6 @@ currencies[,1] <- NULL
 
 ###############
 #Taxes
-
-#load calculated tax data for those countries that do not have a function
-tax.other <- read.csv("import-tables/taxes.csv")
 source("r-scripts/tax.calc.R")
 ###############
 
