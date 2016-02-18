@@ -60,12 +60,16 @@ Expenses.Plot <- function(filename = "import-tables/expenses.csv", currency = "U
   
   ####
   
+  expenses <- Expenses.GoingOut(expenses)
+  
   expenses.plot <- data.frame(vars = c("SUM","Rent","Utilities","Food","Transport",
                                        "Meal.Inexpensive", "Beer", "Cappucino", 
-                                       "Lunch", "Dinner", "Alcohol", "Coffee"),
+                                       "Lunch", "Dinner", "Alcohol", "Coffee",
+                                       "Expenses.Sum"),
                               names = c("monthly Basic living expenses","monthly Rent","monthly Utilities","monthly Food expenses","monthly Commute expenses", 
                                         "Meal Inexpensive", "Beer Draft", "Cappucino",
-                                        "Computed Lunch", "Computed Dinner", "Computed Beer", "Computed Coffee"),
+                                        "Computed Lunch", "Computed Dinner", "Computed Beer", "Computed Coffee",
+                                        "Combined Expenses Model"),
                               stringsAsFactors = FALSE
   )
   
@@ -93,4 +97,30 @@ Expenses.Plot <- function(filename = "import-tables/expenses.csv", currency = "U
   
   return(expenses)
 }
+
+
+Expenses.GoingOut <- function(expenses) {
+  
+  expense.freq <- list(beer = 3, coffee = 2, dinner = 2, lunch = 5 ) # frequency of expenses per week
+  
+  goingout <- data.table(expenses)
+  setkey(goingout, Country)
+  
+  goingout[, "Model.1" := Meal.Inexpensive * (expense.freq$dinner + expense.freq$lunch) * 4 +
+             Beer * expense.freq$beer * 4 +
+             Cappucino * expense.freq$coffee * 4 ]
+  goingout[, "Model.2" := Lunch *  expense.freq$lunch * 4 +
+             Dinner * expense.freq$dinner * 4 +
+             Alcohol * expense.freq$beer * 4 +
+             Coffee * expense.freq$coffee * 4 ]
+  goingout[, "Model.Avg" := (Model.1 + Model.2)/2 ]
+  goingout[, "Expenses.Sum" := Model.Avg + SUM ]
+  
+  
+  return(as.data.frame(goingout))
+  
+}
+
+
+
 
