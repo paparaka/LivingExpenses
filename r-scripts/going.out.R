@@ -38,11 +38,13 @@ goingout2$Country <- factor(goingout2$Country, levels = my.order)
 p <- ggplot(goingout2[expense %in% c("Model.1","Model.2","Model.Avg"),], 
             aes(x = Country, y = value, group = expense, fill = expense)) +
   geom_bar(stat = "identity", position = "dodge", colour = "white") +
-  labs(title ="Going out model",
+  labs(title ="Going out model (USD)",
        x = "",
-       y = "value")+
+       y = "")+
   scale_y_continuous(expand = c(0,0),
                      breaks = seq(0,1000,100))
 p <- Expenses.Comon.Plot(p, "bottom")
 p
 ggsave("export-png/going out model.png", p, width = 12, height = 9, dpi = 300 )
+
+

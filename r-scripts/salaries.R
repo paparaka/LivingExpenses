@@ -50,7 +50,7 @@ p1 <- ggplot (salaries.data,
                      breaks = seq(0,1e7, 25000))
 
 ggsave("export-png/Data salaries gross.png", p1, width = 8, height = 10, dpi = 300)
-ggsave("export-pdf/Data salaries gross.pdf", p1, width = 8, height = 10)
+#ggsave("export-pdf/Data salaries gross.pdf", p1, width = 8, height = 10)
 
 
 # salaries NET per month
