@@ -58,7 +58,7 @@ p1
 
 #
 
-ggsave("export-png/taxes-rate-eur.png", p1, width = 8, height = 7, dpi = 300)
+ggsave("EU-taxes.png", p1, width = 8, height = 7, dpi = 300)
 #ggsave("export-pdf/taxes-rate-eur.pdf", p1, width = 8, height = 7)
 
 # ##################
