@@ -4,7 +4,7 @@
 ############
 # provided by Adam Nohejl
 
-this.tax <- function <- function (gross.Income) {
+this.tax <-  function (gross.Income) {
   # Checked vs. http://www.penize.cz/kalkulacky/mzdova-kalkulacka for year 2016
   
   YEAR_MONTHS	 <- 12
