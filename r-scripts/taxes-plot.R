@@ -56,37 +56,42 @@ p1 <- ggplot(plot.taxes,
   ) 
 p1
 
-
+#
 
 ggsave("export-png/taxes-rate-eur.png", p1, width = 8, height = 7, dpi = 300)
 #ggsave("export-pdf/taxes-rate-eur.pdf", p1, width = 8, height = 7)
 
-##################
+# ##################
+# 
+# taxes.sub <- subset(taxes.all, Country %in% c("California", "UK", "Germany"))
+# taxes.sub[,c( "Net","Gross")] <- 
+#   taxes.sub[,c("Net","Gross")] * currencies[as.character(taxes.sub$Currency),"USD"]
+# 
+# 
+# p2 <- ggplot(taxes.sub, 
+#        aes(x = Gross, y = rate*100, colour = Country, shape = Country)) +
+#   geom_line(size = 1.5) +
+#   geom_point(size = 4) +
+# #   scale_x_continuous(limits = c(0,130000),
+# #                      breaks = seq(0,200000, 10000)) +
+# #   scale_y_continuous(limits = c(12,46),
+# #                      breaks = seq(0,100,5)) +
+#   labs(title = "",
+#        x = "Gross Salary USD",
+#        y = "Effective rate [%]",
+#        colour = "",
+#        shape = "") +
+#   scale_fill_brewer(palette = "Set1") +
+#   theme_bw(base_size = 14) +
+#   theme(legend.position = "bottom")
+# #p2
+# 
+# #ggsave("export-png/taxes-rate-usd.png", p2, width = 8, height = 7, dpi = 300)
+# #ggsave("export-pdf/taxes-rate-usd.pdf", p2, width = 8, height = 7)
+# 
 
-taxes.sub <- subset(taxes.all, Country %in% c("California", "UK", "Germany"))
-taxes.sub[,c( "Net","Gross")] <- 
-  taxes.sub[,c("Net","Gross")] * currencies[as.character(taxes.sub$Currency),"USD"]
 
 
-p2 <- ggplot(taxes.sub, 
-       aes(x = Gross, y = rate*100, colour = Country, shape = Country)) +
-  geom_line(size = 1.5) +
-  geom_point(size = 4) +
-#   scale_x_continuous(limits = c(0,130000),
-#                      breaks = seq(0,200000, 10000)) +
-#   scale_y_continuous(limits = c(12,46),
-#                      breaks = seq(0,100,5)) +
-  labs(title = "",
-       x = "Gross Salary USD",
-       y = "Effective rate [%]",
-       colour = "",
-       shape = "") +
-  scale_fill_brewer(palette = "Set1") +
-  theme_bw(base_size = 14) +
-  theme(legend.position = "bottom")
-#p2
 
-#ggsave("export-png/taxes-rate-usd.png", p2, width = 8, height = 7, dpi = 300)
-#ggsave("export-pdf/taxes-rate-usd.pdf", p2, width = 8, height = 7)
 
 

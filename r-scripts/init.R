@@ -27,7 +27,7 @@ source("r-scripts/tax.calc.R")
 #PLOTS 
 #######
 source("r-scripts/taxes-plot.R")
-source("r-scripts/salaries.R")
+#source("r-scripts/salaries.R") TOFO need to fix the tax issue here
 source("r-scripts/expenses-numbeo.R")
 expenses <- Expenses.Plot(plot = F)
 

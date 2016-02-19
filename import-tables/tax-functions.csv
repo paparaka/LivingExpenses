@@ -2,7 +2,7 @@ Country,Currency,Min,Max,Step,filename
 UK,GBP,20000,120000,5000,UK-tax.R
 Norway,NOK,200000,1500000,50000,Norway-tax.R
 California,USD,20000,150000,5000,California-tax.R
-Belgum,EUR,20000,120000,5000,Belgum-tax.R
+Belgium,EUR,20000,120000,5000,Belgium-tax.R
 Netherlands,EUR,20000,120000,5000,Dutch-tax.R
 Austria,EUR,20000,120000,5000,Austria-tax.R
 Czech,CZK,300000,4000000,200000,Czech-tax.R
