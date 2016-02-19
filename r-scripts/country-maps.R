@@ -1,10 +1,10 @@
 #library(ggmap)
 
 
-Plot.Expenses.Maps <- function(expenses,this.country = "California", this.center = "California") {
+Plot.Expenses.Maps <- function(expenses,this.country = "California", this.center = "California", this.zoom = 6) {
   
   map <- get_map(location = this.center, 
-                 zoom = 6, maptype = "terrain", source = "google", col="color")
+                 zoom = this.zoom, maptype = "terrain", source = "google", col="color")
   
   p <- ggmap(map, extent = 'device') +
     geom_point(data = expenses[expenses$Country == this.country,], 
@@ -26,8 +26,9 @@ plot.Maps <- function (expenses) {
   expenses$lon <- foo$lon
   expenses$lat <- foo$lat
   
-  my.maps <- data.frame(Country = c("California","Germany","Japan","UK","Netherlands"),
-                        center = c("California","Germany","Japan","Manchester","Netherlands"),
+  my.maps <- data.frame(Country = c("California","Germany","Japan","UK","Netherlands", "Belgium","Switzerland"),
+                        center = c("California","Germany","Japan","Manchester","Netherlands", "Belgium","Switzerland"),
+                        zoom = c(rep(6,4),8,7,7),
                         stringsAsFactors = FALSE)
   
   
@@ -35,7 +36,7 @@ plot.Maps <- function (expenses) {
     
     #TODO add try,catch for preventing interruption after errors
     
-    p <- Plot.Expenses.Maps(expenses,my.maps$Country[i],my.maps$center[i])
+    p <- Plot.Expenses.Maps(expenses,my.maps$Country[i],my.maps$center[i],my.maps$zoom[i])
     
     ggsave(paste0("export-png/numbeo-map-",my.maps$Country[i],".png"),p, width = 9, height = 9, dpi = 300)
     ggsave(paste0("export-pdf/numbeo-map-",my.maps$Country[i],".pdf"),p, width = 9, height = 9)
