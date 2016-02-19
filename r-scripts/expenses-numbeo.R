@@ -45,9 +45,10 @@ Expenses.Box.Plot  <- function(expenses, this.var, this.name, this.currency) {
   return(p)
 }
 
-Expenses.Plot <- function(filename = "import-tables/expenses.csv", currency = "USD", plot = TRUE) {
+Expenses.Plot <- function(filename = "import-tables/expenses-numbeo.csv", currency = "USD", plot = TRUE) {
   
   expenses <- read.csv(filename, header = TRUE, sep = ",")
+  #expenses <- read.csv("import-tables/expenses-numbeo.csv", header = TRUE, sep = ",")
   # str(expenses)
   
   # compute the prices for the 4 categories bellow based on Nagoya prices and Price Index ratio between the calculated city and Nagoya 
@@ -91,7 +92,7 @@ Expenses.Plot <- function(filename = "import-tables/expenses.csv", currency = "U
       # ggsave(paste0("export-png/numbeo-bar-",expenses.plot$names[i],".png"),p1, width = 12, height = 9, dpi = 300)
       # ggsave(paste0("export-pdf/numbeo-bar-",expenses.plot$names[i],".pdf"),p1, width = 12, height = 9)
       ggsave(paste0("export-png/numbeo-box-",expenses.plot$names[i],".png"),p2, width = 12, height = 9, dpi = 300)
-      ggsave(paste0("export-pdf/numbeo-box-",expenses.plot$names[i],".pdf"),p2, width = 12, height = 9)
+      #ggsave(paste0("export-pdf/numbeo-box-",expenses.plot$names[i],".pdf"),p2, width = 12, height = 9)
     }
   }
   

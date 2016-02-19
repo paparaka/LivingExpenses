@@ -26,8 +26,8 @@ plot.Maps <- function (expenses) {
   expenses$lon <- foo$lon
   expenses$lat <- foo$lat
   
-  my.maps <- data.frame(Country = c("California","Germany","Japan","UK"),
-                        center = c("California","Germany","Japan","Manchester"),
+  my.maps <- data.frame(Country = c("California","Germany","Japan","UK","Netherlands"),
+                        center = c("California","Germany","Japan","Manchester","Netherlands"),
                         stringsAsFactors = FALSE)
   
   
